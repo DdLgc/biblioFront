@@ -1,3 +1,40 @@
+:root {
+  --color1: #2c75ff;
+  --color2: #f5f5dc;
+  --color3: #8a8a8a;
+  --color4: #5c3009;
+  --color5: #ffd700;
+}
+* {
+  // box-shadow: 0 0 0 3px red inset;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+nav {
+  background-color: var(--color5);
+  color: var(--color4);
+  padding: 10px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: var(--color4);
+}
+// header nav ul li a {
+//   // background-color: #5c3009;
+//   color: var(--color5);
+//   color: #ffd700;
+// }
+
 // Style de la card generale
 .fp {
   justify-content: space-between;
@@ -25,9 +62,26 @@
   // display: flex;
   justify-content: start;
 }
+button.card-button {
+  padding: 5px 5px 5px 5px;
+}
 .card-button {
   width: 100%;
 }
 .size-30 {
   width: 30%;
+}
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: aqua;
+}
+h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: var(--color1);
+}
+section {
+  width: 100%;
+  background-color: var(--color2);
 }
