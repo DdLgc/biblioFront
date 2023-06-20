@@ -65,6 +65,27 @@
         </button>
       </div>
     </div>
+
+<div *ngFor="let book of bookList" class="fp">
+  <div class="card size-30">
+    <img
+      src="https://media.senscritique.com/media/000006655127/300/les_fleurs_du_mal.jpg"
+      class="card-img"
+    />
+    <div class="card-title">{{book.title}}</div>
+    <div class="card-description">
+      La section Les Fleurs du Mal (poèmes CIX à CXVII) regroupe des poèmes
+      qui explorent la condition humaine et les aspects les plus sombres de
+      la vie. Baudelaire y décrit l'angoisse existentielle, la souffrance,
+      la mort et la déchéance, en explorant les thèmes de la solitude, de la
+      maladie et de la dépression.
+    </div>
+    <button [routerLink]="['detail-book/', 1]" class="card-button">
+      Détails du livre
+    </button>
+  </div>
+</div>
+
   </section>
 
   <section>

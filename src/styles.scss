@@ -4,11 +4,11 @@
 // font-family: 'Pacifico', cursive;
 
 :root {
-  --color1: #2c75ff;
-  --color2: #f5f5dc;
-  --color3: #8a8a8a;
-  --color4: #5c3009;
-  --color5: #ffd700;
+  --color1: #E5E7E6;
+  --color2: #EEE6D8;
+  --color3: #DAAB3A;
+  --color4: #B67332;
+  --color5: #93441A;
 }
 * {
   // background: var(--color3);
@@ -85,7 +85,7 @@ h1 {
 h2 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: var(--color1);
+  color: var(--color3);
 }
 section {
   width: 100%;

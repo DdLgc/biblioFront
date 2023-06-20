@@ -1,8 +1,9 @@
-export interface Reservation {
-  return_date_initial: Date,
-  loan_date: Date,
-  id_user: number,
-  id_book: number
-  // reel_return_date: Date
+import { User } from "./user.interface";
 
+export interface Reservation {
+  returnDateInitial: Date,
+  loanDate: Date,
+  idBook: number,
+  reelReturnDate?: Date,
+  user: User
  }
