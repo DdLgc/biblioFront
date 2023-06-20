@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Pacifico&display=swap');
+
+// font-family: 'Lobster Two', cursive;
+// font-family: 'Pacifico', cursive;
+
 :root {
   --color1: #2c75ff;
   --color2: #f5f5dc;
@@ -6,6 +11,7 @@
   --color5: #ffd700;
 }
 * {
+  // background: var(--color3);
   // box-shadow: 0 0 0 3px red inset;
   padding: 0;
   margin: 0;

@@ -11,13 +11,10 @@ import { DetailBookComponent } from './detail-book/detail-book.component';
     AppComponent,
     HomeComponent,
     ListBooksComponent,
-    DetailBookComponent
+    DetailBookComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
