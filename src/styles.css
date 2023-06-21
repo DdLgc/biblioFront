@@ -12,6 +12,7 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  list-style: none;
 }
 
 nav {
@@ -24,12 +25,16 @@ nav {
 }
 
 nav li {
-  margin-right: 10px;
+  margin: 20px;
 }
 
 nav li a {
   text-decoration: none;
   color: var(--color4);
+}
+
+nav li a h1:hover {
+  color: #DAAB3A;
 }
 
 .fp {
@@ -74,12 +79,14 @@ button.card-button {
 }
 
 h1 {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: aqua;
+  font-family: 'Lobster Two', cursive;
+  color: var(--color1);
+  letter-spacing: 2px;
 }
 
 h2 {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: 1.5px;
+  font-family: 'Pacifico', cursive;
   color: var(--color3);
 }
 

@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient,  HttpHeaders} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Book } from '../book.interface';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HttpGetBookService {
-
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
   listAllBooks(): Observable<any> {
-    return this.httpClient.get('http://localhost/Biblio/public/index.php/api/books.json')
+    return this.httpClient.get(
+      'http://localhost/Biblio/public/index.php/api/books.json'
+    );
   }
 }

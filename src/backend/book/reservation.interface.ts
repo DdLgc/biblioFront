@@ -1,9 +1,9 @@
-import { User } from "./user.interface";
+import { User } from './user.interface';
 
 export interface Reservation {
-  returnDateInitial: Date,
-  loanDate: Date,
-  idBook: number,
-  reelReturnDate?: Date,
-  user: User
- }
+  returnDateInitial: Date;
+  loanDate: Date;
+  idBook: number;
+  reelReturnDate?: Date;
+  user: User;
+}

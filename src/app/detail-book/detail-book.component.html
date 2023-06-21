@@ -1,1 +1,36 @@
-<p>detail-book works!</p>
+<title>Détails Livres</title>
+
+<body>
+  <style>
+    nav {
+      background-color: var(--color5);
+      color: var(--color4);
+      padding: 10px;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+    }
+    nav li {
+      margin-right: 10px;
+    }
+    nav li a {
+      text-decoration: none;
+      color: var(--color4);
+    }
+    h2 {
+      padding: 5px;
+    }
+  </style>
+  <header>
+    <nav>
+      <ul>
+        <li><a routerLink="/"><h1>Accueil</h1></a></li>
+        <li><a routerLink="/list-books"><h1>Liste Livres</h1></a></li>
+        <li><a routerLink=""><h1>Service Numérique</h1></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h2>Détails Livres</h2>
+  <!-- {{detail.book}} -->
+</body>
