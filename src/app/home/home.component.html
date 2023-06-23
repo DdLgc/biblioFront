@@ -1,91 +1,28 @@
-<title>Bibliothèque</title>
-
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a routerLink="/home">Accueil</a></li>
-        <li><a routerLink="/list-books">Liste Livres</a></li>
-        <li><a routerLink="">Service Numérique</a></li>
-      </ul>
-    </nav>
-  </header>
-
+<div class="body">
   <section>
     <h2>A la Une</h2>
     <div class="fp">
-      <div class="card size-30">
+      <div *ngFor="let book of bookList" class="card size-card">
         <img
-          src="https://media.senscritique.com/media/000006655127/300/les_fleurs_du_mal.jpg"
+          src="../../assets/img/book/Les-Fleurs-du-Mal.jpg"
           class="card-img"
         />
-        <div class="card-title">Les Fleurs du mal (1857)</div>
+        <div class="card-title">{{ book.title }}</div>
         <div class="card-description">
-          La section Les Fleurs du Mal (poèmes CIX à CXVII) regroupe des poèmes
-          qui explorent la condition humaine et les aspects les plus sombres de
-          la vie. Baudelaire y décrit l'angoisse existentielle, la souffrance,
-          la mort et la déchéance, en explorant les thèmes de la solitude, de la
-          maladie et de la dépression.
+          <p>
+            {{book.description.length > 90? (book.description | slice : 0 : 90) + "..": book.description}}
+          </p>
         </div>
-        <button [routerLink]="['detail-book/', 1]" class="card-button">
-          Détails du livre
-        </button>
-      </div>
-      <div class="card size-30">
-        <img
-          src="https://media.senscritique.com/media/000007143411/300/l_etranger.jpg"
-          class="card-img"
-        />
-        <div class="card-title">L'étranger</div>
-        <div class="card-description">
-          L'Étranger est un roman écrit par Albert Camus et publié en 1942.
-          Partie prenante du cycle de l'absurde de l'auteur, ce roman retrace en
-          conséquence l'histoire d'un homme ordinaire soumis à l'absurdité de
-          l'existence et de la condition humaine.
+        <div>
+          <button [routerLink]="['detail-book/',book.id]" class="card-button">
+            Détails du livre
+          </button>
+          <button (click)="onSubmit(book.id)" class="card-button">
+            reserver le livre
+          </button>
         </div>
-        <button [routerLink]="['detail-book/', 2]" class="card-button">
-          Détails du livre
-        </button>
-      </div>
-      <div class="card size-30">
-        <img
-          src="https://media.senscritique.com/media/000020245094/300/les_miserables.jpg"
-          class="card-img"
-        />
-        <div class="card-title">Les Misérables (1862)</div>
-        <div class="card-description">
-          Les Misérables est à la fois un roman d'inspiration réaliste, épique
-          et romantique, un hymne à l'amour et un roman politique et social.
-          Roman réaliste, Les Misérables décrit tout un univers de gens humbles.
-          C'est une peinture très précise de la vie dans la France et le Paris
-          pauvre au début du XIX e siècle.
-        </div>
-        <button [routerLink]="['detail-book/', 3]" class="card-button">
-          Détails du livre
-        </button>
       </div>
     </div>
-
-<div *ngFor="let book of bookList" class="fp">
-  <div class="card size-30">
-    <img
-      src="https://media.senscritique.com/media/000006655127/300/les_fleurs_du_mal.jpg"
-      class="card-img"
-    />
-    <div class="card-title">{{book.title}}</div>
-    <div class="card-description">
-      La section Les Fleurs du Mal (poèmes CIX à CXVII) regroupe des poèmes
-      qui explorent la condition humaine et les aspects les plus sombres de
-      la vie. Baudelaire y décrit l'angoisse existentielle, la souffrance,
-      la mort et la déchéance, en explorant les thèmes de la solitude, de la
-      maladie et de la dépression.
-    </div>
-    <button [routerLink]="['detail-book/', 1]" class="card-button">
-      Détails du livre
-    </button>
-  </div>
-</div>
-
   </section>
 
   <section>
@@ -130,39 +67,4 @@
       </p>
     </div>
   </section>
-
-  <footer>
-    <div class="rubrique">
-      <h3>Rubrique</h3>
-      <ul>
-        <li>Nouveautés</li>
-        <li>Horaires et Fermetures</li>
-        <li>Les Coups de Cœur 2022</li>
-        <li>Nos Sélections Thématiques</li>
-        <li>Prix des Lecteurs 2023</li>
-      </ul>
-    </div>
-
-    <div class="suivez-nous">
-      <h3>Suivez-nous</h3>
-      <ul>
-        <li>Twitter</li>
-        <li>Facebook</li>
-        <li>Github</li>
-      </ul>
-    </div>
-
-    <div class="les-plus-consultes">
-      <h3>Les + Consultés</h3>
-      <ul>
-        <li>Les Nouveautés</li>
-        <li>Horaires et Fermetures</li>
-        <li>Les Coups de Cœur 2022</li>
-        <li>Nos Sélections Thématiques</li>
-        <li>Prix des Lecteurs 2023</li>
-        <li>Numok</li>
-        <li>Vos Derniers Commentaires</li>
-      </ul>
-    </div>
-  </footer>
-</body>
+</div>

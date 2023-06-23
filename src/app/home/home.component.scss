@@ -1,6 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 nav ul {
@@ -23,7 +24,10 @@ nav ul li a {
 section {
   margin: 20px 0;
   padding: 0 20px;
+  width: 90%;
+  background-color: var(--color1);
 }
+
 
 h2 {
   margin-bottom: 10px;
@@ -96,3 +100,19 @@ footer .suivez-nous ul li,
 footer .les-plus-consultes ul li {
   margin-bottom: 5px;
 }
+
+.fp {
+  justify-content: center;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.size-card {
+  width: 13%;
+  margin: 1rem;
+}
+
+
+

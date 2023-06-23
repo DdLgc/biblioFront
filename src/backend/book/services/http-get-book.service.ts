@@ -10,6 +10,6 @@ export class HttpGetBookService {
 
   constructor(private httpClient: HttpClient) { }
   listAllBooks(): Observable<any> {
-    return this.httpClient.get('http://localhost/Biblio/public/index.php/api/books.json')
+    return this.httpClient.get('http://localhost/Biblio-API/public/index.php/api/books.json')
   }
 }
