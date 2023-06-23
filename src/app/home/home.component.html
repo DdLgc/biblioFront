@@ -1,24 +1,8 @@
 <title>Bibliothèque</title>
 
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li>
-          <a routerLink=""><h1>Accueil</h1></a>
-        </li>
-        <li>
-          <a routerLink="/list-books"><h1>Liste Livres</h1></a>
-        </li>
-        <li>
-          <a routerLink=""><h1>Service Numérique</h1></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
   <section>
-    <h2>A la Une</h2>
+    <h2 class="ala1">A la Une</h2>
 
     <!-- src="https://media.senscritique.com/media/000006655127/300/les_fleurs_du_mal.jpg" -->
 
@@ -26,16 +10,14 @@
 
     <!-- src="https://media.senscritique.com/media/000020245094/300/les_miserables.jpg" -->
 
-    <div  class="fp">
+    <div class="fp">
       <div *ngFor="let book of bookList" class="card size-30">
-        <img
-          [src]="book.url"
-          class="card-img"
-          alt="Couverture du livre"
-        />
-        <div class="card-title">{{ book.title }}</div>
+        <img [src]="book.url" class="card-img" alt="Couverture du livre" />
+        <div class="card-title">
+          {{ book.title }}
+        </div>
         <div class="card-description">
-          {{book.description}}
+          {{ book.description }}
         </div>
         <button [routerLink]="['detail-book/', book.id]" class="card-button">
           Détails du livre
@@ -47,18 +29,18 @@
   <section>
     <h2>Coup de Cœur</h2>
     <div class="coup-de-coeur-livre">
-      <img src="" alt="Couverture du livre 1" />
-      <h3>Livre 1</h3>
-      <p>
+      <img src="../../assets/img/book/L'Étranger_-_Albert_Camus.jpg" alt="Couverture du livre 1" />
+      <h3>Livre 1</h3><!-- {{ book.title }} -->
+       <p><!--{{ book.description }} -->
         Synopsis du livre 1.Lorem ipsum dolor sit amet consectetur, adipisicing
         elit. Esse ullam, veniam necessitatibus ad deleniti aliquam placeat
         dignissimos cum facere quasi nihil illum eligendi similique magnam
       </p>
     </div>
     <div class="coup-de-coeur-livre">
-      <img src="" alt="Couverture du livre 2" />
-      <h3>Livre 2</h3>
-      <p>
+      <img src="../../assets/img/book/les_miserables.jpg" alt="Couverture du livre 2" />
+      <h3>Livre 2</h3><!-- {{ book.title }} -->
+      <p><!--{{ book.description }} -->
         Synopsis du livre 2. Lorem ipsum dolor sit amet consectetur, adipisicing
         elit. Esse ullam, veniam necessitatibus ad deleniti aliquam placeat
         dignissimos cum facere quasi nihil illum eligendi similique magnam.
@@ -98,16 +80,6 @@
         <li>Prix des Lecteurs 2023</li>
       </ul>
     </div>
-
-    <div class="suivez-nous">
-      <h3>Suivez-nous</h3>
-      <ul>
-        <li>Twitter</li>
-        <li>Facebook</li>
-        <li>Github</li>
-      </ul>
-    </div>
-
     <div class="les-plus-consultes">
       <h3>Les + Consultés</h3>
       <ul>
@@ -120,5 +92,15 @@
         <li>Vos Derniers Commentaires</li>
       </ul>
     </div>
+    <div class="suivez-nous">
+      <h3>Suivez-nous</h3>
+      <ul>
+        <li>Twitter</li>
+        <li>Facebook</li>
+        <li><a href="https://github.com/DdLgc">Github</a></li>
+      </ul>
+    </div>
+
+
   </footer>
 </body>

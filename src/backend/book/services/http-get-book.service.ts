@@ -13,4 +13,10 @@ export class HttpGetBookService {
       'http://localhost/Biblio/public/index.php/api/books.json'
     );
   }
+
+  bookById(id: number): Observable<any> {
+    return this.httpClient.get(
+      'http://localhost/Biblio/public/index.php/api/books/'+id+'.json'
+    );
+  }
 }

@@ -8,7 +8,7 @@ describe('DetailBookComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DetailBookComponent]
+      declarations: [DetailBookComponent],
     });
     fixture = TestBed.createComponent(DetailBookComponent);
     component = fixture.componentInstance;

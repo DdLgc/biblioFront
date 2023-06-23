@@ -2,20 +2,24 @@ h2 {
   margin-top: 86px !important;
   margin-left: 20px;
 }
+
 section {
   border-radius: 15px;
   margin: 20px;
   height: 80%;
 }
+
 .card-title {
   padding: 5px;
   margin: 2px;
 }
+
 .card-autor {
   padding: 5px;
   margin: 2px;
 }
+
 .card-img {
   padding: 5px;
   margin: 2px;
-}
+}/*# sourceMappingURL=detail-book.component.css.map */

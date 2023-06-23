@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&family=Pacifico&display=swap");
 
 // font-family: 'Lobster Two', cursive;
 // font-family: 'Pacifico', cursive;
 
 :root {
-  --color1: #E5E7E6;
-  --color2: #EEE6D8;
-  --color3: #DAAB3A;
-  --color4: #B67332;
-  --color5: #93441A;
+  --color1: #e5e7e6; //ne fonctionne pas sur app.component
+  --color2: #eee6d8;
+  --color3: #daab3a;
+  --color4: #b67332;
+  --color5: #93441a;
 }
 * {
-  // background: var(--color3);
   // box-shadow: 0 0 0 3px red inset;
+  overflow-x: hidden; // ne fonctionne pas
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -20,71 +20,124 @@
   list-style: none;
 }
 nav {
-  background-color: var(--color5);
+  border-radius:0px 0px 15px 15px ;
+  width: 100%;
+  position:fixed;
+  top: 0;
+  background: linear-gradient(0deg, #DAAB3Aff, #B7782Aff, #93441Aff);
   color: var(--color4);
-  padding: 10px;
   list-style-type: none;
-  display: flex;
+}
+nav ul {
+  display: flex ;
   justify-content: center;
+  flex-direction: row;
 }
 nav li {
   margin: 20px;
 }
 nav li a {
+
   text-decoration: none;
   color: var(--color4);
 }
 nav li a h1:hover {
   color: #DAAB3A;
 }
+section {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
 
 // Style de la card generale
 .fp {
-  justify-content: space-between;
+  justify-content: center;
   width: auto;
   display: flex;
   flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
 }
 .card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border:1px solid black;
   margin: 15px;
   box-shadow: 0 0 3px 0;
 }
-.card-img {
-  width: 100%;
+img.card-img {
+  float: right;
+  // width: 100%;
 }
 .card-title {
-  // display: flex;
+  flex: 1;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   font-size: large;
   font-weight: bold;
+  display: flex;
+  align-content: flex-start;
 }
 .card-description {
+  width: 35%;
+  float: left;
   padding: 5px !important;
   margin: 5px !important;
   // display: flex;
   justify-content: start;
 }
 button.card-button {
-  padding: 5px 5px 5px 5px;
+  flex: 1;
+  background: linear-gradient(0deg, #DAAB3Aff, #B7782Aff, #93441Aff);
+  color:var(--color1);
+  margin: 5px 5px 5px 5px;
+  width: 50%;
+  border-radius: 15px;
 }
-.card-button {
-  width: 100%;
+button.card-button:hover {
+  transform: scale(1.05);
 }
 .size-30 {
   width: 30%;
 }
 h1 {
-  font-family: 'Lobster Two', cursive;
-  color:var(--color1);
+  -webkit-text-stroke: 0.05px;
+  -webkit-text-stroke-color:var(--color1);
+  font-family: "Lobster Two", cursive;
+  color: var(--color1);
   letter-spacing: 2px;
 }
 h2 {
+  margin-bottom: 10px;
   letter-spacing: 1.5px;
-  font-family:  'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   color: var(--color3);
+}
+h3 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 section {
   width: 100%;
   background-color: var(--color2);
+}
+footer {
+  border-radius: 15px 15px 0px 0px ;
+  margin: 10px 0px 0px 0px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  color: var(--color2);
+  background: linear-gradient(0deg, #93441aff, #b7782aff, #daab3aff);
+}
+
+footer .rubrique ul,
+footer .suivez-nous ul,
+footer .les-plus-consultes ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .rubrique ul li,
+footer .suivez-nous ul li,
+footer .les-plus-consultes ul li {
+  margin-bottom: 5px;
 }

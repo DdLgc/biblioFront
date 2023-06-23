@@ -1,36 +1,22 @@
-<title>Détails Livres</title>
-
 <body>
-  <style>
-    nav {
-      background-color: var(--color5);
-      color: var(--color4);
-      padding: 10px;
-      list-style-type: none;
-      display: flex;
-      justify-content: center;
-    }
-    nav li {
-      margin-right: 10px;
-    }
-    nav li a {
-      text-decoration: none;
-      color: var(--color4);
-    }
-    h2 {
-      padding: 5px;
-    }
-  </style>
-  <header>
-    <nav>
-      <ul>
-        <li><a routerLink="/"><h1>Accueil</h1></a></li>
-        <li><a routerLink="/list-books"><h1>Liste Livres</h1></a></li>
-        <li><a routerLink=""><h1>Service Numérique</h1></a></li>
-      </ul>
-    </nav>
-  </header>
-
+  {{bookId}}
   <h2>Détails Livres</h2>
-  <!-- {{detail.book}} -->
+  <section>
+    <div class="card">
+      <div class="card-title">{{book.title}}</div>
+      <div class="card-autor">{{book.autor}}</div>
+      <div class="card-img">
+        <img
+          src="../../assets/img/book/les_miserables.jpg"
+          alt="couverture du livre"
+        />
+      </div>
+      <div class="card-description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non tempora eum
+        reprehenderit veritatis, beatae necessitatibus veniam expedita modi cum
+        ratione ipsam odit laboriosam nostrum earum.
+      </div>
+      <button class="card-button">Réservation</button>
+    </div>
+  </section>
 </body>
