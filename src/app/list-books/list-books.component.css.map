@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"list-books.component.css"}
+{"version":3,"sources":["list-books.component.scss","list-books.component.css"],"names":[],"mappings":"AAAA;EACE,gBAAA;EACA,YAAA;ACCF","file":"list-books.component.css"}
