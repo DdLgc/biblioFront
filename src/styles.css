@@ -39,6 +39,7 @@ section {
 
 img.card-img {
   float: right;
+  width: 50%;
 }
 
 .card-title {
