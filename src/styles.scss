@@ -19,31 +19,31 @@
   text-decoration: none;
   list-style: none;
 }
-nav {
-  border-radius:0px 0px 15px 15px ;
-  width: 100%;
-  position:fixed;
-  top: 0;
-  background: linear-gradient(0deg, #DAAB3Aff, #B7782Aff, #93441Aff);
-  color: var(--color4);
-  list-style-type: none;
-}
-nav ul {
-  display: flex ;
-  justify-content: center;
-  flex-direction: row;
-}
-nav li {
-  margin: 20px;
-}
-nav li a {
+// nav {
+//   border-radius:0px 0px 15px 15px ;
+//   width: 100%;
+//   position:fixed;
+//   top: 0;
+//   background: linear-gradient(0deg, #DAAB3Aff, #B7782Aff, #93441Aff);
+//   color: var(--color4);
+//   list-style-type: none;
+// }
+// nav ul {
+//   display: flex ;
+//   justify-content: center;
+//   flex-direction: row;
+// }
+// nav li {
+//   margin: 20px;
+// }
+// nav li a {
 
-  text-decoration: none;
-  color: var(--color4);
-}
-nav li a h1:hover {
-  color: #DAAB3A;
-}
+//   text-decoration: none;
+//   color: var(--color4);
+// }
+// nav li a h1:hover {
+//   color: #DAAB3A;
+// }
 section {
   margin-top: 20px;
   padding-bottom: 20px;
@@ -118,26 +118,4 @@ h3 {
 section {
   width: 100%;
   background-color: var(--color2);
-}
-footer {
-  border-radius: 15px 15px 0px 0px ;
-  margin: 10px 0px 0px 0px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-around;
-  color: var(--color2);
-  background: linear-gradient(0deg, #93441aff, #b7782aff, #daab3aff);
-}
-
-footer .rubrique ul,
-footer .suivez-nous ul,
-footer .les-plus-consultes ul {
-  list-style: none;
-  padding: 0;
-}
-
-footer .rubrique ul li,
-footer .suivez-nous ul li,
-footer .les-plus-consultes ul li {
-  margin-bottom: 5px;
 }
