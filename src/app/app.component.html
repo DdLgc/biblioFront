@@ -1,51 +1,49 @@
-
+<header>
+  <nav>
+    <ul>
+      <li><a routerLink="/home">Accueil</a></li>
+      <li><a routerLink="/list-books">Liste Livres</a></li>
+      <li><a routerLink="">Service Numérique</a></li>
+    </ul>
+  </nav>
+</header>
 <router-outlet></router-outlet>
 
-  <header>
-    <nav>
-      <ul>
-        <li>
-          <a routerLink=""><h1>Accueil</h1></a>
-        </li>
-        <li>
-          <a routerLink="/list-books"><h1>Liste Livres</h1></a>
-        </li>
-        <li>
-          <a routerLink=""><h1>Service Numérique</h1></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <footer>
-    <div class="rubrique">
-      <h3>Rubrique</h3>
-      <ul>
-        <li>Nouveautés</li>
-        <li>Horaires et Fermetures</li>
-        <li>Les Coups de Cœur 2022</li>
-        <li>Nos Sélections Thématiques</li>
-        <li>Prix des Lecteurs 2023</li>
-      </ul>
-    </div>
-    <div class="les-plus-consultes">
-      <h3>Les + Consultés</h3>
-      <ul>
-        <li>Les Nouveautés</li>
-        <li>Horaires et Fermetures</li>
-        <li>Les Coups de Cœur 2022</li>
-        <li>Nos Sélections Thématiques</li>
-        <li>Prix des Lecteurs 2023</li>
-        <li>Numok</li>
-        <li>Vos Derniers Commentaires</li>
-      </ul>
-    </div>
-    <div class="suivez-nous">
-      <h3>Suivez-nous</h3>
-      <ul>
-        <li>Twitter</li>
-        <li>Facebook</li>
-        <li><a href="https://github.com/DdLgc">Github</a></li>
-      </ul>
-    </div>
-  </footer>
+<footer>
+  <div class="footer-section rubrique">
+    <h3>Rubrique</h3>
+    <ul>
+      <li>Nouveautés</li>
+      <li>Horaires et Fermetures</li>
+      <li>Les Coups de Cœur 2022</li>
+      <li>Nos Sélections Thématiques</li>
+      <li>Prix des Lecteurs 2023</li>
+    </ul>
+  </div>
+  <hr class="vertical">
+
+
+  <div class="footer-section suivez-nous">
+    <h3>Suivez-nous</h3>
+    <ul>
+      <li>Twitter</li>
+      <li>Facebook</li>
+      <li>Github</li>
+    </ul>
+  </div>
+  <hr class="vertical">
+
+  <div class="footer-section les-plus-consultes">
+    <h3>Les + Consultés</h3>
+    <ul>
+      <li>Les Nouveautés</li>
+      <li>Horaires et Fermetures</li>
+      <li>Les Coups de Cœur 2022</li>
+      <li>Nos Sélections Thématiques</li>
+      <li>Prix des Lecteurs 2023</li>
+      <li>Numok</li>
+      <li>Vos Derniers Commentaires</li>
+    </ul>
+  </div>
+</footer>
 

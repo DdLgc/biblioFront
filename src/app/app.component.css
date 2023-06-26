@@ -1,51 +1,52 @@
-nav {
-  border-radius: 0px 0px 15px 15px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background: linear-gradient(0deg, #daab3a, #b7782a, #93441a);
-  color: var(--color4);
-  list-style-type: none;
-}
-
 nav ul {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+  list-style: none;
+  background-color: #f2f2f2;
+  padding: 10px;
 }
 
-nav li {
-  margin: 20px;
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
 }
 
-nav li a {
+nav ul li a {
   text-decoration: none;
-  color: var(--color4);
-}
-
-nav li a h1:hover {
-  color: #daab3a;
+  padding: 5px 10px;
+  color: #333;
 }
 
 footer {
-  border-radius: 15px 15px 0px 0px;
-  margin: 10px 0px 0px 0px;
-  padding: 20px;
   display: flex;
-  justify-content: space-around;
-  color: var(--color2);
-  background: linear-gradient(0deg, #93441a, #b7782a, #daab3a);
+  justify-content: space-between;
+  background-color: var(--color2);
+  color: var(--color1);
 }
 
-footer .rubrique ul,
-footer .suivez-nous ul,
-footer .les-plus-consultes ul {
+.footer-section {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: var(--color-text-dark);
+}
+
+.footer-section ul {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
 }
 
-footer .rubrique ul li,
-footer .suivez-nous ul li,
-footer .les-plus-consultes ul li {
-  margin-bottom: 5px;
+.footer-section ul li {
+  padding: 5px 0;
+  color: var(--color-text-dark);
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-section ul li:hover {
+  color: var(--color-text-dark-hover);
 }/*# sourceMappingURL=app.component.css.map */
