@@ -4,10 +4,20 @@
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  display: inline;
 }
 .hero img {
   width: 100%;
   height: 99.5vh;
+}
+.hero span {
+  z-index: 100;
+  position:absolute;
+  left: 10%;
+  top: 50%;
+  font-size: large;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
 }
 section {
   margin: 20px 20px;

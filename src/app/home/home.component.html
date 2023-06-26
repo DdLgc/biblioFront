@@ -1,6 +1,7 @@
 <title>Bibliothèque</title>
 <body>
   <section class="hero">
+    <span>Bienvenue a la bibliotheque ...</span>
     <img
       src="../../assets/img/hero/will-van-wingerden-dsvJgiBJTOs-unsplash.jpg"
       alt="hero"
@@ -15,7 +16,11 @@
           {{ book.title }}
         </div>
         <div class="card-description">
-          {{ book.description }}
+          {{
+            book.description.length > 90
+              ? (book.description | slice : 0 : 90) + ".."
+              : book.description
+          }}
         </div>
         <button [routerLink]="['detail-book/', book.id]" class="card-button">
           Détails du livre
@@ -35,9 +40,10 @@
       <!-- {{ book.title }} -->
       <p>
         <!--{{ book.description }} -->
-        Synopsis du livre 1
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, autem aspernatur quibusdam iure quidem corporis dicta consequuntur? Tempora pariatur dolores cum nemo culpa. Nobis, fugit sint! Quasi nihil voluptas fugiat debitis suscipit odio culpa molestiae?
-
+        Synopsis du livre 1 Lorem ipsum dolor sit amet consectetur, adipisicing
+        elit. Cupiditate, autem aspernatur quibusdam iure quidem corporis dicta
+        consequuntur? Tempora pariatur dolores cum nemo culpa. Nobis, fugit
+        sint! Quasi nihil voluptas fugiat debitis suscipit odio culpa molestiae?
       </p>
     </div>
     <div class="coup-de-coeur-livre">
@@ -46,18 +52,19 @@
         alt="Couverture du livre 2"
       />
       <h3>Livre 2</h3>
-      <!-- {{ book.title }} -->
+
       <p>
-        <!--{{ book.description }} -->
-        Synopsis du livre 2.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum assumenda dolores beatae nobis atque, distinctio molestiae quo! Sapiente omnis provident voluptatibus, non numquam, ab placeat fugiat libero pariatur facere facilis aperiam modi. Reiciendis, sapiente delectus.
+        Synopsis du livre 2. Lorem, ipsum dolor sit amet consectetur adipisicing
+        elit. Earum assumenda dolores beatae nobis atque, distinctio molestiae
+        quo! Sapiente omnis provident voluptatibus, non numquam, ab placeat
+        fugiat libero pariatur facere facilis aperiam modi. Reiciendis, sapiente
+        delectus.
       </p>
     </div>
   </section>
 
   <section>
     <h2>Commentaires des Lecteurs</h2>
-
     <div class="commentaire-lecteur">
       <h3>Livre 1</h3>
       <p>

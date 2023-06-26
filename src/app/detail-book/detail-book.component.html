@@ -1,10 +1,13 @@
-<body>
-  {{bookId}}
+<div *ngIf="!book" class="body">
+<h1>Chargement ...</h1>
+</div>
+<div *ngIf="book" class="body">
+  {{ bookId }}
   <h2>Détails Livres</h2>
   <section>
     <div class="card">
-      <div class="card-title">{{book.title}}</div>
-      <div class="card-autor">{{book.autor}}</div>
+      <div class="card-title">{{ book.title }}</div>
+      <div class="card-autor">{{ book.autor }}</div>
       <div class="card-img">
         <img
           src="../../assets/img/book/les_miserables.jpg"
@@ -16,7 +19,9 @@
         reprehenderit veritatis, beatae necessitatibus veniam expedita modi cum
         ratione ipsam odit laboriosam nostrum earum.
       </div>
-      <button class="card-button">Réservation</button>
+      <button (click)="onSubmit(book.id)" class="card-button">
+        Reserver le livre
+      </button>
     </div>
   </section>
-</body>
+</div>

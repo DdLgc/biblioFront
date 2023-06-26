@@ -18,8 +18,4 @@ export class HomeComponent {
       this.bookList = books
     })
   }
-
-  onSubmit(id:number){
-    this.httpPostReservationService.postBooks(id).subscribe()
-  }
 }

@@ -21,6 +21,7 @@ export class HttpPostReservationService {
       user: "api/users/1"
     }
 
-    return this.httpClient.post('http://localhost/Biblio-API/public/index.php/api/reservations',body)
+    return this.httpClient.post('http://localhost/Biblio/public/index.php/api/reservations',body)
   }
 }
+

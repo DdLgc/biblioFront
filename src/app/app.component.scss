@@ -6,6 +6,7 @@ nav {
   background: linear-gradient(0deg, #daab3aff, #b7782aff, #93441aff);
   color: var(--color4);
   list-style-type: none;
+  text-decoration: none;
 }
 nav ul {
   display: flex;
@@ -16,6 +17,7 @@ nav li {
   margin: 20px;
 }
 nav li a {
+  list-style-type: none;
   text-decoration: none;
   color: var(--color4);
 }
