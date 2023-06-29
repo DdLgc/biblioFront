@@ -4,4 +4,5 @@ export interface Book {
   autor: string;
   description: string;
   url: string;
+  isReserved: boolean;
 }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Book } from 'src/backend/book/book.interface';
 import { HttpGetBookService } from 'src/backend/book/services/http-get-book.service';
+import { HttpPatchBookService } from 'src/backend/book/services/http-patch-book.service';
 import { HttpPostReservationService } from 'src/backend/book/services/http-post-reservation.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class DetailBookComponent {
   constructor(
     private httpPostReservationService: HttpPostReservationService,
     private httpGetBookService: HttpGetBookService,
-    private router: ActivatedRoute
+    private router: ActivatedRoute,
+    private httpPatchBookService: HttpPatchBookService
   ) {}
   bookId: number = -1;
   book!: Book;
@@ -26,6 +28,12 @@ export class DetailBookComponent {
     });
   }
   onSubmit(id:number){
+
     this.httpPostReservationService.postBooks(id).subscribe()
+    this.httpPatchBookService.patchBooks(id,this.book.isReserved).subscribe(data => {
+      this.httpGetBookService.bookById(this.bookId).subscribe((book) => {
+        this.book = book;
+      });
+    })
   }
 }

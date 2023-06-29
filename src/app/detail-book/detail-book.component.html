@@ -1,5 +1,5 @@
 <div *ngIf="!book" class="body">
-<h1>Chargement ...</h1>
+<h4>Chargement ...</h4>
 </div>
 <div *ngIf="book" class="body">
   {{ bookId }}
@@ -20,10 +20,12 @@
       <button (click)="onSubmit(book.id)" class="card-button">
         Reserver le livre
       </button>
-      <!-- <div *ngIf="is_reserved; else elseBlock"> -->
+      <div *ngIf="book.isReserved">
+        block rouge
+      </div>
+      <div *ngIf="!book.isReserved">
         block vert
-      <!-- </div> -->
-<ng-template #elseBlock>block rouge</ng-template>
+      </div>
     </div>
   </section>
 </div>

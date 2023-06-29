@@ -7,6 +7,8 @@ import { ListBooksComponent } from './list-books/list-books.component';
 import { DetailBookComponent } from './detail-book/detail-book.component';
 import { HttpGetBookService } from 'src/backend/book/services/http-get-book.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpPatchBookService } from 'src/backend/book/services/http-patch-book.service';
+import { HttpPostReservationService } from 'src/backend/book/services/http-post-reservation.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     DetailBookComponent,
   ],
   imports: [BrowserModule, AppRoutingModule,HttpClientModule],
-  providers: [HttpGetBookService],
+  providers: [HttpGetBookService, HttpPatchBookService, HttpPostReservationService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
