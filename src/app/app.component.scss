@@ -1,4 +1,5 @@
 nav {
+  z-index: 1001;
   border-radius: 0px 0px 15px 15px;
   width: 100%;
   position: fixed;
@@ -19,10 +20,10 @@ nav li {
 nav li a {
   list-style-type: none;
   text-decoration: none;
-  color: var(--color4);
+  color: var(--color1);
 }
-nav li a h1:hover {
-  color: #daab3a;
+nav li a:hover {
+  color:var(--color5);
 }
 footer {
   border-radius: 15px 15px 0px 0px;

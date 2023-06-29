@@ -10,7 +10,12 @@
   width: 100%;
   height: 99.5vh;
 }
-.hero span {
+.typedText {
+  font-family: cursive;
+  font-size:30px;
+  margin: 10px 50px;
+  letter-spacing: 6px;
+  font-weight: bold;
   z-index: 100;
   position:absolute;
   left: 10%;
@@ -32,6 +37,7 @@ section {
   justify-content: space-between;
 }
 .coup-de-coeur-livre {
+  border-radius: 10px;
   width: 95%;
   margin-bottom: 20px;
   padding: 10px;
@@ -66,3 +72,4 @@ section {
   font-size: 14px;
   line-height: 1.4;
 }
+

@@ -1,12 +1,12 @@
-h2 {
-  margin-top: 86px !important;
-  margin-left: 20px;
-}
-
 section {
   border-radius: 15px;
   margin: 20px;
   height: 80%;
+}
+
+h2 {
+  margin-top: 86px !important;
+  margin-left: 20px;
 }
 
 .card-title {
@@ -20,6 +20,22 @@ section {
 }
 
 .card-img {
+  float: left;
   padding: 5px;
   margin: 2px;
+}
+
+.card-descritpion {
+  float: inline-end;
+}
+
+p .descritpion {
+  font-size: 32px;
+}
+
+.desponibility {
+  border: 1px solid black;
+  width: 112px;
+  height: 112px;
+  background-color: green;
 }/*# sourceMappingURL=detail-book.component.css.map */

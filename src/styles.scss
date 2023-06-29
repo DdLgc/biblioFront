@@ -1,10 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&family=Pacifico&display=swap");
-
-// font-family: 'Lobster Two', cursive;
-// font-family: 'Pacifico', cursive;
-
 :root {
-  --color1: #e5e7e6; //ne fonctionne pas sur app.component
+  --color1: #e5e7e6;
   --color2: #eee6d8;
   --color3: #daab3a;
   --color4: #b67332;
@@ -12,38 +7,13 @@
 }
 * {
   // box-shadow: 0 0 0 3px red inset;
-  overflow-x: hidden; // ne fonctionne pas
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
 }
-// nav {
-//   border-radius:0px 0px 15px 15px ;
-//   width: 100%;
-//   position:fixed;
-//   top: 0;
-//   background: linear-gradient(0deg, #DAAB3Aff, #B7782Aff, #93441Aff);
-//   color: var(--color4);
-//   list-style-type: none;
-// }
-// nav ul {
-//   display: flex ;
-//   justify-content: center;
-//   flex-direction: row;
-// }
-// nav li {
-//   margin: 20px;
-// }
-// nav li a {
-
-//   text-decoration: none;
-//   color: var(--color4);
-// }
-// nav li a h1:hover {
-//   color: #DAAB3A;
-// }
 section {
   margin-top: 20px;
   padding-bottom: 20px;
@@ -66,7 +36,7 @@ section {
 }
 img.card-img {
   float: right;
-  width: 50%;
+  width: 7em;
 }
 .card-title {
   flex: 1;
@@ -82,14 +52,12 @@ img.card-img {
   float: left;
   padding: 5px !important;
   margin: 5px !important;
-  // display: flex;
   justify-content: start;
 }
 button.card-button {
-  flex: 1;
   background: linear-gradient(0deg, #DAAB3Aff, #B7782Aff, #93441Aff);
   color:var(--color1);
-  margin: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 10px;
   width: 50%;
   border-radius: 15px;
 }
@@ -100,20 +68,32 @@ button.card-button:hover {
   width: 30%;
 }
 h1 {
-  -webkit-text-stroke: 0.05px;
-  -webkit-text-stroke-color:var(--color1);
-  font-family: "Lobster Two", cursive;
+  @font-face {
+    font-family: "burlington";
+    src: url(./assets/fonts/SFBurlingtonScriptSC-Bold.ttf);
+  }
+  font-family: burlington;
   color: var(--color1);
   letter-spacing: 2px;
+  font-size: 220%;
 }
 h2 {
   margin-bottom: 10px;
   letter-spacing: 1.5px;
-  font-family: "Pacifico", cursive;
+  @font-face {
+    font-family: "blacksword";
+    src: url(./assets/fonts/GDPU.ttf);
+  }
+  font-weight: bolder;
+  font-size: 170% ;
+  font-family: blacksword;
   color: var(--color3);
 }
 h3 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ h4 { //  chargement
+  letter-spacing: 2px;
 }
 section {
   width: 100%;
@@ -121,7 +101,7 @@ section {
 }
 // ************Scollbar*************
 body::-webkit-scrollbar {
-  width: 12px;
+  width: 0.7em;
 }
 body::-webkit-scrollbar-track {
   background:#daab3aff;

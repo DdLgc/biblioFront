@@ -1,7 +1,8 @@
 <title>Bibliothèque</title>
 <body>
   <section class="hero">
-    <span>Bienvenue a la bibliotheque ...</span>
+    <div class="typedText" id="typedtext">Bienvenue à la Bibliothèque des vieux livres,<br>
+            vieux vieux, tout depend lesquelles</div>
     <img
       src="../../assets/img/hero/will-van-wingerden-dsvJgiBJTOs-unsplash.jpg"
       alt="hero"
@@ -13,7 +14,7 @@
       <div *ngFor="let book of bookList" class="card size-30">
         <img [src]="book.url" class="card-img" alt="Couverture du livre" />
         <div class="card-title">
-          {{ book.title }}
+          <h3>{{ book.title }}</h3>
         </div>
         <div class="card-description">
           {{
