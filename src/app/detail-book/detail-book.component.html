@@ -21,10 +21,10 @@
         Reserver le livre
       </button>
       <div *ngIf="book.isReserved">
-        block rouge
+        <img class="icon-dispo" src="../../assets/img/icons8-cross-mark-button-48.png">Non-disponible
       </div>
       <div *ngIf="!book.isReserved">
-        block vert
+        <img class="icon-dispo" src="../../assets/img/icons8-case-cochée-48.png">Disponible
       </div>
     </div>
   </section>

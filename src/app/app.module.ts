@@ -10,12 +10,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HttpPatchBookService } from 'src/backend/book/services/http-patch-book.service';
 import { HttpPostReservationService } from 'src/backend/book/services/http-post-reservation.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ListBooksComponent,
-    DetailBookComponent,
+    DetailBookComponent
   ],
   imports: [BrowserModule, AppRoutingModule,HttpClientModule],
   providers: [HttpGetBookService, HttpPatchBookService, HttpPostReservationService],
