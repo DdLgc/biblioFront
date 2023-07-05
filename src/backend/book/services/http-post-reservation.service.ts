@@ -18,7 +18,7 @@ export class HttpPostReservationService {
       idBook: [
         "api/books/"+id
       ],
-      user: "api/users/1"
+        user: "api/users/6" //  a changer
     }
 
     return this.httpClient.post('http://localhost/Biblio/public/index.php/api/reservations',body)

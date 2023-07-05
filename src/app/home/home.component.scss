@@ -60,6 +60,7 @@ section {
   grid-template-rows: auto 1fr;
   grid-gap: 20px;
   margin: 15px;
+  border-radius: 10px;
 }
 .commentaire-lecteur {
   padding: 10px;
@@ -78,6 +79,7 @@ section {
   margin-bottom: 5px;
 }
 .commentaire-lecteur p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   grid-template: 2 100%;
   font-size: 14px;
   line-height: 1.4;

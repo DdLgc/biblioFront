@@ -1,21 +1,17 @@
 <h2>Liste de livres</h2>
 <section>
   <div class="fp">
-    <div *ngFor="let book of bookList" class="card size-15">
+    <div *ngFor="let book of bookList" class="card ">
       <img [src]="book.url" class="card-img" alt="Couverture du livre" />
       <div class="card-title">
         <h3>{{ book.title }}</h3>
       </div>
       <div class="card-description">
-        {{
-          book.description.length > 90
-            ? (book.description | slice : 0 : 90) + ".."
-            : book.description
-        }}
+        {{ book.description }}
       </div>
-      <button [routerLink]="['detail-book/', book.id]" class="card-button">
+      <!-- <button [routerLink]="['detail-book/', book.id]" class="card-button">
         Détails du livre
-      </button>
+      </button> -->
     </div>
   </div>
 </section>
