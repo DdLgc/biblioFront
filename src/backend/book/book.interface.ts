@@ -1,3 +1,5 @@
+import { Reservation } from "./reservation.interface";
+
 export interface Book {
   id: number;
   title: string;
@@ -5,4 +7,5 @@ export interface Book {
   description: string;
   url: string;
   isReserved: boolean;
+  reservations: Reservation[];
 }

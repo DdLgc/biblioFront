@@ -17,15 +17,17 @@
       <div class="card-description">
         <p class="description">{{ book.description }}</p>
       </div>
-      <button (click)="onSubmit(book.id)" class="card-button">
+      <button *ngIf="!book.isReserved"(click)="onSubmit(book.id)" class="card-button">
         Reserver le livre
       </button>
       <div *ngIf="book.isReserved">
         <img class="icon-dispo" src="../../assets/img/icons8-cross-mark-button-48.png">Non-disponible
+        <button *ngIf="idLastReservation!=-1" (click)="deleteBook(idLastReservation)" class="card-button">Supprimer</button>
       </div>
       <div *ngIf="!book.isReserved">
         <img class="icon-dispo" src="../../assets/img/icons8-case-cochée-48.png">Disponible
       </div>
+
     </div>
   </section>
 </div>

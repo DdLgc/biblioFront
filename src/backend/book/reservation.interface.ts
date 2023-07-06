@@ -6,4 +6,5 @@ export interface Reservation {
   idBook: number;
   reelReturnDate?: Date;
   user: User;
+  id: number;
 }
