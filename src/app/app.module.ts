@@ -9,6 +9,7 @@ import { HttpGetBookService } from 'src/backend/book/services/http-get-book.serv
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HttpPatchBookService } from 'src/backend/book/services/http-patch-book.service';
 import { HttpPostReservationService } from 'src/backend/book/services/http-post-reservation.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { HttpPostReservationService } from 'src/backend/book/services/http-post-
     ListBooksComponent,
     DetailBookComponent
   ],
-  imports: [BrowserModule, AppRoutingModule,HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule,HttpClientModule,FormsModule],
   providers: [HttpGetBookService, HttpPatchBookService, HttpPostReservationService],
   bootstrap: [AppComponent],
 })

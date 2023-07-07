@@ -20,8 +20,13 @@
       <button *ngIf="!book.isReserved"(click)="onSubmit(book.id)" class="card-button">
         Reserver le livre
       </button>
+      <label>Utilisateur qui réserve le livre</label>
+      <select [(ngModel)] = "userSelected">
+        <option  *ngFor="let user of users" [ngValue]="user.id">{{ user.name }}</option>
+      </select>
       <div *ngIf="book.isReserved">
         <img class="icon-dispo" src="../../assets/img/icons8-cross-mark-button-48.png">Non-disponible
+
         <button *ngIf="idLastReservation!=-1" (click)="deleteBook(idLastReservation)" class="card-button">Supprimer</button>
       </div>
       <div *ngIf="!book.isReserved">

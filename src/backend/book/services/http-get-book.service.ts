@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class HttpGetBookService {
   constructor(private httpClient: HttpClient) {}
-  
+
   listAllBooks(): Observable<any> {
     return this.httpClient.get(
       'http://localhost/Biblio/public/index.php/api/books.json'
@@ -17,7 +17,7 @@ export class HttpGetBookService {
 
   bookById(id: number): Observable<any> {
     return this.httpClient.get(
-      'http://localhost/Biblio/public/index.php/api/books/'+id+'.json'
+      'http://localhost/Biblio/public/index.php/api/books/' + id + '.json'
     );
   }
 }

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class HttpPostReservationService {
 
   constructor(private httpClient: HttpClient) { }
-  postBooks(id: number): Observable<any> {
+  postBooks(id: number, idUser: number): Observable<any> {
     let returnDateInitial = new Date();
     returnDateInitial.setDate(returnDateInitial.getDate() + 30);
     let body = {
@@ -18,7 +18,7 @@ export class HttpPostReservationService {
       idBook: [
         "api/books/"+id
       ],
-        user: "api/users/6" //  a changer
+        user: "api/users/"+idUser
     }
 
     return this.httpClient.post('http://localhost/Biblio/public/index.php/api/reservations',body)
